@@ -1,6 +1,9 @@
 package SlidingWindow;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class SlidingWindow {
 
@@ -27,6 +30,8 @@ public class SlidingWindow {
         int[] myArry ={1,2,3,1 };
         System.out.println(" nearby duplicates " + containsNearbyAlmostDuplicate(myArry, 3, 0 ));
 
+
+        reverseArray();
 
 
     }
@@ -112,10 +117,28 @@ public class SlidingWindow {
 
 
 
-  /*  [1,2,3,1]
-            3
-            0
-*/
+
+     public static int[] reverseArray(){
+
+        int[] nums ={1,2,3,4,5,6};
+
+         int E = nums.length -1;
+
+        for( int i = 0; i < nums.length/2; i++){
+
+            int startValue = nums[i];
+            int endValue = nums[E];
+            nums[i]= endValue;
+            nums[E] = startValue;
+            E--;
+        }
+
+         for (int num: nums ) {
+             System.out.println("---->>>"+num);
+         }
+
+        return null;
+     }
 
 
 }
