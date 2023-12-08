@@ -118,9 +118,12 @@ public class SlidingWindow {
 
 
 
+
+
+
      public static int[] reverseArray(){
 
-        int[] nums ={1,2,3,4,5,6};
+        int[] nums ={1,2,3,4,5,6,7};
 
          int E = nums.length -1;
 
@@ -128,6 +131,7 @@ public class SlidingWindow {
 
             int startValue = nums[i];
             int endValue = nums[E];
+
             nums[i]= endValue;
             nums[E] = startValue;
             E--;
