@@ -1,4 +1,4 @@
-package solidPrinciples;
+package solidPrinciples.singleResponsibility;
 
 public class SingleResponsibility {
 
