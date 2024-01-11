@@ -1,0 +1,25 @@
+states that clients should not be forced to depend upon interface members they do not use.
+do not force any client to implement an interface that is irrelevant to them.
+
+e.g.
+
+suppose there's an interface for vehicles and a bike class:
+
+public interface Vehicle{
+    void drive();
+    void stop();
+    void refuel();
+    void openDoors();
+}
+
+
+public class Bike implements Vehicle{
+    public void drive(){}
+    public void stop(){}
+    public void refuel(){}
+    public void openDoors(){}
+}
+
+logically you can't perform these operations with on a bicycle, essentially breaking the rule of interface segregation design principle.
+
+

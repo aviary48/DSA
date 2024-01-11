@@ -1,4 +1,4 @@
-package solidPrinciples;
+package solidPrinciples.singleResponsibility;
 
 public class SingleResponsibility {
 
@@ -36,6 +36,7 @@ public class SingleResponsibility {
             this.length = eLength;
             this.width = eWidth;
         }
+
 
 
     }

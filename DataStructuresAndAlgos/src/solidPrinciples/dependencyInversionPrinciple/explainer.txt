@@ -1,0 +1,22 @@
+states that we should depend on abstractions(interfaces and abstract classes) instead of concrete implementation(classes)
+the abstractions should not depend on details, instead the details should depend on abstractions.
+
+
+e.g  assuming we have a class Car that depends on engine class, hence not obeying the Principle because it's tightly coupled,if we were to add a property like fuel type,
+it would mean that we have to modify the engine class.
+
+public class Car {
+    private Engine engine;
+    public Car(Engine e) {
+        engine = e;
+    }
+    public void start() {
+        engine.start();
+    }
+}
+public class Engine {
+   public void start() {...}
+}
+
+instead, we should create an abstraction (interface) on engine which will have all properties we want.
+
